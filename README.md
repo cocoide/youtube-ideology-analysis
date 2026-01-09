@@ -128,4 +128,42 @@ pytest tests/test_api.py
 
 - YouTube Data APIには利用制限があります
 - 大量のコメント取得には時間がかかる場合があります
-- 再実行時、SQLiteデータベースは既存のコメントをスキップします# youtube-ideology-analysis
+- 再実行時、SQLiteデータベースは既存のコメントをスキップします
+
+## サンプルデータ収集
+
+卒論研究用のサンプル動画データを管理・収集するための追加機能：
+
+### サンプル動画管理
+
+`sample_videos.csv`でサンプル動画のメタデータを管理：
+- video_id: YouTube動画ID
+- title: 動画タイトル
+- channel: チャンネル名
+- description: 動画説明
+- category: 分類（政治、社会など）
+- tags: タグ（カンマ区切り）
+
+### サンプル収集スクリプト
+
+```bash
+# サンプル動画のコメントを収集
+python3 collect_sample.py
+```
+
+出力：
+- `out/samples/{video_id}_{timestamp}.csv`: 動画ごとのコメント（メタデータ付き）
+- `out/samples/all_samples_{timestamp}.sqlite`: 全サンプルの統合データベース
+
+### 収集データ分析
+
+```bash
+# 収集したデータの基本分析
+python3 analyze_sample.py
+```
+
+分析内容：
+- コメント数、いいね数、返信数の統計
+- コメント文字数の分布
+- よく使われる単語（簡易版）
+- 人気コメントの表示
