@@ -1,0 +1,4 @@
+hypothesis,method,statistic,p_value,effect_size,notes
+H1,Two-proportion z-test,1.6894827359667561,0.09112695754575384,0.08577116150250996,"Loss VP rate: 0.303, Gain VP rate: 0.217"
+H2,Two-proportion z-test,-4.534196896749777,5.7823070838125545e-06,-0.23922451099186426,"Loss E_ext rate: 0.119, Gain E_ext rate: 0.358"
+H1,Chi-square test,2.4107854819062995,0.12050188880261353,0.08666161287516834,Degrees of freedom: 1

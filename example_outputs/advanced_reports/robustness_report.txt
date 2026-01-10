@@ -1,0 +1,17 @@
+=== Robustness Analysis Report ===
+
+H1 (Loss → VP):
+- Full analysis p-value: 0.043
+- Significant in 2/4 LOO iterations
+- P-value range: 0.011 - 0.413
+- Assessment: SENSITIVE (varies by video)
+
+H2 (Gain → E_ext):
+- Full analysis p-value: 0.000005
+- Significant in 4/4 LOO iterations
+- P-value range: 0.000001 - 0.003318
+- Assessment: ROBUST (always significant)
+
+=== Effect Size Stability ===
+H1 effect size range: 0.043 to 0.135
+H2 effect size range: -0.259 to -0.139
